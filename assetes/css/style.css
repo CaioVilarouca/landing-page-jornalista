@@ -133,7 +133,88 @@ img {
 }
 /* ====== / Reusable CSS Classes ====== */
 
-/* ====== ====== */
+/* ====== Header & Nav ====== */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--first-color);
+    z-index: var(--z-fixed);
+    transition: background-color .4s, box-shadow .4s;
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+    transition: color .4s;
+}
+
+.nav-toggle,
+.nav-close {
+    display: inline-flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav-toggle {
+    color: var(--white-color);
+    transition: color .4s;
+}
+
+.nav-close {
+    color: var(--title-color);
+}
+/* Navigation for mobile devices */
+@media screen and (min-width: 1150px) {
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: var(--body-color);
+        width: 100%;
+        box-shadow: 0 12px 24px var(--shadow-color);
+        padding-block: 5rem 4rem;
+        transition: top .4s;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    text-align: center;
+}
+
+.nav-link {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    transition: color .4s;
+}
+
+.nav-link:hover {
+    color: var(--first-color);
+}
+
+.nav-close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+    top: 0;
+}
+
 /* ====== ====== */
 /* ====== ====== */
 /* ====== ====== */
