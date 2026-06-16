@@ -272,6 +272,7 @@ img {
     font-weight: var(--font-semi-bold);
     padding: 1rem 2rem;
     border-radius: .25rem;
+    border: solid 2px var(--first-color);
     transition: background-color .4s, box-shadow .4s;
 }
 
@@ -376,6 +377,22 @@ img {
 .about-button {
     justify-self: center;
 }
+
+.div-button {
+    justify-self: center;
+}
+
+.button-download {
+    background: transparent;
+    color: var(--first-color);
+}
+
+.button-download:hover {
+    color: var(--white-color);
+}
+/* ====== / About ====== */
+
+
 /* ====== ====== */
 /* ====== ====== */
 /* ====== ====== */
