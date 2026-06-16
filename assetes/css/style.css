@@ -378,8 +378,13 @@ img {
     justify-self: center;
 }
 
-.div-button {
+.about-buttons {
     justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .button-download {
