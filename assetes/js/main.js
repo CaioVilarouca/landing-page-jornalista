@@ -23,3 +23,26 @@ const bgHeader = () => {
     this.scrollY >= 50 ? header.classList.add('bg-header'):header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', bgHeader)
+
+/* ========== SERVICES MODAL ========== */
+const modal = document.querySelectorAll('.services-modal'),
+      modalButton = document.querySelectorAll('.services-button'),
+      modalClose = document.querySelectorAll('.services-modal-close')
+
+const activeModal = (modalClick) => {
+    modal[modalClick].classList.add('active-modal')
+}
+
+modalButton.forEach((button, i) => {
+    button.addEventListener('click', () => {
+        activeModal(i)
+    })
+})
+
+modalClose.forEach((closeButton) => {
+    closeButton.addEventListener('click', () => {
+        modal.forEach((modalItem) => {
+            modalItem.classList.remove('active-modal')
+        })
+    })
+})
