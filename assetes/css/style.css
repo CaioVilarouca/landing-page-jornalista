@@ -281,7 +281,7 @@ img {
 }
 /* ====== / Button ====== */
 
-/* ====== HOME ====== */
+/* ====== Home ====== */
 .home {
     position: relative;
     border-bottom: 8px solid var(--first-color);
@@ -337,8 +337,45 @@ img {
 .home-button {
     justify-self: center;
 }
-/* ====== / HOME ====== */
-/* ====== ====== */
+/* ====== / Home ====== */
+
+/* ====== About ====== */
+.about-page {
+    padding-bottom: 4rem;
+}
+
+.about-perfil {
+    justify-self: center;
+}
+
+.about-content {
+    row-gap: 4rem;
+}
+
+.about-data {
+    row-gap: 2rem;
+}
+
+.about-info {
+    row-gap: .75rem;
+    text-align: center;
+}
+
+.about-name {
+    font-size: var(--h1-font-size);
+}
+
+.about-profession {
+    font-size: var(--h2-font-size);
+}
+
+.about-description strong {
+    color: var(--first-color);
+}
+
+.about-button {
+    justify-self: center;
+}
 /* ====== ====== */
 /* ====== ====== */
 /* ====== ====== */
