@@ -30,7 +30,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="button">Meu contato</a>
+                            <a href="#contact" class="button">Meu contato</a>
                         </li>
                     </ul>
 
@@ -125,7 +125,7 @@
                             </div>
 
                             <div class="about-buttons">
-                                <a href="#" class="about-button button">Meu contato</a>
+                                <a href="#contact" class="about-button button">Meu contato</a>
                                 <a href="assetes/docs/Currículo Larissa.pdf" download="" class="home-button button button-download">Download CV</a>
                             </div>
                         </div>
@@ -353,6 +353,40 @@
                         <span class="work-subtitle">30/06/25</span>
                     </article>
 
+                </div>
+            </section>
+
+            <!-- ========== CONTACT ========== -->
+            <section class="contact section" id="contact">
+                <div class="contact-container container grid">
+                    <h2 class="section-title">
+                        Entre em contato
+                    </h2>
+
+                    <div class="contact-page container grid">
+                        <form action="" class="contact-form grid" id="contact-form">
+                        <div class="contact-group grid">
+                            <div class="contact-box">
+                                <input type="text" name="user-name" id="name" placeholder="Informe seu nome" class="contact-input">
+                                <label for="name" class="contact-label">Nome:</label>
+                            </div>
+
+                            <div class="contact-box">
+                                <input type="email" name="user-email" id="email" placeholder="Informe seu E-Mail" class="contact-input">
+                                <label for="email" class="contact-label">E-Mail:</label>
+                            </div>
+                        </div>
+
+                        <div class="contact-box contact-area">
+                            <textarea name="user-message" id="message" placeholder="Informe sobre o que se trata" class="contact-input"></textarea>
+                            <label for="message" class="contact-label">Assunto:</label>
+                        </div>
+
+                        <p class="contact-message" id="contact-message"></p>
+
+                        <button type="submit" class="contact-send button">Enviar</button>
+                    </form>
+                    </div>
                 </div>
             </section>
         </main> 
