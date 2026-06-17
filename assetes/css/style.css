@@ -5,8 +5,8 @@
 :root {
     --header-height: 3.5rem;
 
-    --hue:255;
-    --first-color: hsl(var(--hue), 90%, 60%);
+    --hue:356;
+    --first-color: hsl(var(--hue), 66%, 77%);
     --first-color-alt: hsl(var(--hue), 82%, 56%);
     --first-color-light: hsl(var(--hue), 40%, 80%); 
     --title-color: hsl(var(--hue), 24%, 16%);
@@ -253,15 +253,6 @@ img {
 .bg-header :is(.nav-logo, .nav-toggle) {
     color: var(--text-color);
 }
-
-/*  Header Background color of other pages  */
-.header-pages {
-    background-color: var(--body-color);
-}
-
-.header-pages :is(.nav-logo, .nav-toggle){
-    color: var(--title-color);
-}
 /* ====== / Header & Nav ====== */
 
 /* ====== Button ====== */
@@ -351,6 +342,19 @@ img {
 
 .about-content {
     row-gap: 4rem;
+}
+
+.about-perfil {
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-items: center;
+    transition: background-color .4s;
+}
+
+.about-img {
+    mask-image: linear-gradient(to bottom, hsla(var(--hue), 65%, 61%) 60%, transparent 100%);
+    border-radius: .3rem;
 }
 
 .about-data {

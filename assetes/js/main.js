@@ -1,11 +1,11 @@
 /* ========== SHOW MENU ========== */
 const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
 /* MENU SHOW */
 if (navToggle) {
-    navToggle.addEventListener('click', () =>{
+    navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
 }
@@ -16,6 +16,15 @@ if (navClose) {
         navMenu.classList.remove('show-menu')
     })
 }
+
+/* FECHAR MENU AO CLICAR EM QUALQUER LINK */
+const navLinks = document.querySelectorAll('.nav-link, .nav-menu .button')
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu')
+    })
+})
 
 /* ========== CHANGE BACKGROUND HEADER ========== */
 const bgHeader = () => {
