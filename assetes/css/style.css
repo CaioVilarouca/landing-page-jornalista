@@ -264,7 +264,7 @@ img {
     padding: 1rem 2rem;
     border-radius: .25rem;
     border: solid 2px var(--first-color);
-    transition: background-color .4s, box-shadow .4s, border .4s;
+    transition: background-color .4s, box-shadow .4s, border.4s;
 }
 
 .button:hover {
@@ -401,6 +401,8 @@ img {
     color: var(--white-color);
 }
 /* ====== / About ====== */
+
+/* ====== Services ====== */
 .services-container {
     row-gap: 2rem;
 }
@@ -497,9 +499,8 @@ img {
     opacity: 1;
     visibility: visible;
 }
-
-/* ====== Services ====== */
-
 /* ====== / Services ====== */
+
+
 /* ====== ====== */
 /* ====== ====== */
