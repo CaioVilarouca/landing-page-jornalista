@@ -501,6 +501,43 @@ img {
 }
 /* ====== / Services ====== */
 
+/* ====== Work ====== */
+.work-container {
+    row-gap: 2rem;
+}
 
-/* ====== ====== */
-/* ====== ====== */
+.work-link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.work-img {
+    filter: grayscale(1);
+    transition: filter .5s, transform .5s;
+}
+
+.work-icon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 2rem;
+    color: var(--first-color);
+    transition: transform .4s;
+}
+
+.work-link:hover .work-img{
+    transform: scale(1.1);
+    filter: none;
+}
+
+.work-link:hover .work-icon {
+    transform: translate(.5rem, -.5rem) rotate(-50deg);
+}
+
+.work-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: .25rem;
+}
+/* ====== / Work ====== */
