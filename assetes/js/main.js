@@ -55,39 +55,3 @@ modalClose.forEach((closeButton) => {
         })
     })
 })
-
-/* ========== EMAIL ========== */
-const contactForm = document.getElementById('contact-form');
-const contactMessage = document.getElementById('contact-message');
-
-const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-        'service_fwvhypj',
-        'template_0kovht3',
-        contactForm
-    )
-    .then((response) => {
-        contactMessage.textContent = 'Mensagem enviada com sucesso.';
-        contactMessage.style.color = 'green';
-
-        contactForm.reset();
-
-        setTimeout(() => {
-            contactMessage.textContent = '';
-        }, 5000);
-
-        console.log('SUCESSO:', response.status, response.text);
-    })
-    .catch((error) => {
-        contactMessage.textContent = 'Erro ao enviar a mensagem.';
-        contactMessage.style.color = 'red';
-
-        console.log('ERRO EMAILJS:', error);
-    });
-};
-
-if (contactForm) {
-    contactForm.addEventListener('submit', sendEmail);
-}
