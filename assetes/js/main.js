@@ -55,3 +55,38 @@ modalClose.forEach((closeButton) => {
         })
     })
 })
+
+/* ========== EMAIL ========== */
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    // ServiceID - TemplateID - Form - PublicKey
+    emailjs.sendForm(
+        'service_fwvhypj',
+        'template_0kovht3',
+        '#contact-form',
+        {
+            publicKey: 'SdCCWskzutAHv5_s5'
+        }
+    )
+    .then(() => {
+        contactMessage.textContent = 'Mensagem enviada com sucesso.';
+        contactMessage.style.color = 'green';
+
+        contactForm.reset();
+
+        setTimeout(() => {
+            contactMessage.textContent = '';
+        }, 5000);
+    })
+    .catch((error) => {
+        contactMessage.textContent = 'Erro ao enviar a mensagem.';
+        contactMessage.style.color = 'red';
+
+        console.log('Erro:', error);
+    });
+};
+contactForm.addEventListener('submit', sendEmail);
