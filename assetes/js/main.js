@@ -68,9 +68,7 @@ const sendEmail = (e) => {
         'service_fwvhypj',
         'template_0kovht3',
         '#contact-form',
-        {
-            publicKey: 'SdCCWskzutAHv5_s5'
-        }
+        'ozOjc4akZ1T_4mK6R'
     )
     .then(() => {
         contactMessage.textContent = 'Mensagem enviada com sucesso.';
