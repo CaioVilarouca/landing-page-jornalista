@@ -594,6 +594,10 @@ img {
 
 .contact-area {
     height: 10rem;
+}
+
+.contact-area textarea {
+    resize: none;
     padding-top: 1.25rem;
 }
 
