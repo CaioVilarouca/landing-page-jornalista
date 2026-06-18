@@ -63,14 +63,12 @@ const contactMessage = document.getElementById('contact-message');
 const sendEmail = (e) => {
     e.preventDefault();
 
-    // ServiceID - TemplateID - Form - PublicKey
     emailjs.sendForm(
         'service_fwvhypj',
         'template_0kovht3',
-        '#contact-form',
-        'ozOjc4akZ1T_4mK6R'
+        contactForm
     )
-    .then(() => {
+    .then((response) => {
         contactMessage.textContent = 'Mensagem enviada com sucesso.';
         contactMessage.style.color = 'green';
 
@@ -79,12 +77,17 @@ const sendEmail = (e) => {
         setTimeout(() => {
             contactMessage.textContent = '';
         }, 5000);
+
+        console.log('SUCESSO:', response.status, response.text);
     })
     .catch((error) => {
         contactMessage.textContent = 'Erro ao enviar a mensagem.';
         contactMessage.style.color = 'red';
 
-        console.log('Erro:', error);
+        console.log('ERRO EMAILJS:', error);
     });
 };
-contactForm.addEventListener('submit', sendEmail);
+
+if (contactForm) {
+    contactForm.addEventListener('submit', sendEmail);
+}
