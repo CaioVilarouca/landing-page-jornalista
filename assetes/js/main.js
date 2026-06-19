@@ -55,3 +55,16 @@ modalClose.forEach((closeButton) => {
         })
     })
 })
+
+/* ========== show scroll up ========== */
+const scrollUp = () => {
+    const scrollUpButton = document.getElementById('scroll-up')
+
+    if (window.scrollY >= 350) {
+        scrollUpButton.classList.add('show-scroll')
+    } else {
+        scrollUpButton.classList.remove('show-scroll')
+    }
+}
+
+window.addEventListener('scroll', scrollUp)
