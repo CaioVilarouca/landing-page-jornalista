@@ -92,3 +92,27 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/* ========== SCROLL REVEAL ANIMATION ========== */
+const revealElements = document.querySelectorAll(
+    '.section-title, .about-perfil, .about-content, .services-card, .work-card, .contact-form'
+);
+
+revealElements.forEach((element) => {
+    element.classList.add('reveal');
+});
+
+const scrollReveal = () => {
+    revealElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementTop < windowHeight - 100) {
+            element.classList.add('show-reveal');
+        }
+    });
+};
+
+window.addEventListener('scroll', scrollReveal);
+window.addEventListener('load', scrollReveal);
