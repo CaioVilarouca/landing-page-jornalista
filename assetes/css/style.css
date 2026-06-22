@@ -341,26 +341,32 @@ img {
     padding-bottom: 4rem;
 }
 
+.about-container {
+    align-items: center;
+    gap: 2.5rem;
+}
+
 .about-perfil {
+    width: 100%;
+    max-width: 340px;
     justify-self: center;
-}
-
-.about-content {
-    row-gap: 4rem;
-}
-
-.about-perfil {
-    width: 250px;
-    height: 250px;
     display: grid;
     place-items: center;
     transition: background-color .4s;
 }
 
+.about-content {
+    width: 100%;
+}
+
 .about-img {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
     -webkit-mask-image: linear-gradient(to bottom, hsl(var(--hue), 65%, 61%) 60%, transparent 100%);
     mask-image: linear-gradient(to bottom, hsl(var(--hue), 65%, 61%) 60%, transparent 100%);
     border-radius: .3rem;
+    object-fit: contain;
 }
 
 .about-data {
@@ -368,8 +374,8 @@ img {
 }
 
 .about-info {
-    row-gap: .75rem;
-    text-align: center;
+    row-gap: 1rem;
+    text-align: initial;
 }
 
 .about-name {
@@ -378,6 +384,10 @@ img {
 
 .about-profession {
     font-size: var(--h2-font-size);
+}
+
+.about-description {
+    line-height: 1.7;
 }
 
 .about-description strong {
@@ -389,7 +399,7 @@ img {
 }
 
 .about-buttons {
-    justify-self: center;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -397,7 +407,10 @@ img {
     flex-wrap: wrap;
 }
 
-
+.about-buttons-row {
+    grid-column: 1 / -1;
+    margin-top: .5rem;
+}
 
 .button-download {
     background: transparent;
@@ -802,7 +815,7 @@ body.dark-theme {
     }
 
     .about-container {
-        grid-template-columns: 400px;
+        grid-template-columns: minmax(320px, 420px);
         justify-content: center;
     }
 }
@@ -980,14 +993,27 @@ body.dark-theme {
     }
 
     .about-container {
-        grid-template-columns: 500px 440px;
-        align-items: center;
-        column-gap: 8rem;
-        padding-top: 2rem;
+    grid-template-columns: minmax(300px, 380px) minmax(420px, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    padding-top: 2rem;
+    }
+
+    .about-perfil {
+        max-width: 360px;
+    }
+
+    .about-img {
+        max-width: 340px;
+    }
+
+    .about-content {
+        max-width: 680px;
     }
 
     .about-data {
-        row-gap: 3.5rem;
+        row-gap: 3rem;
     }
 
     .about-info {
@@ -995,7 +1021,7 @@ body.dark-theme {
     }
 
     .about-buttons {
-        justify-self: flex-start;
+        justify-content: center;
     }
 }
 
