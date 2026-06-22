@@ -96,7 +96,7 @@ themeButton.addEventListener('click', () => {
 
 /* ========== SCROLL REVEAL ANIMATION ========== */
 const revealElements = document.querySelectorAll(
-    '.section-title, .about-perfil, .about-content, .services-card, .work-card, .contact-form'
+    '.section-title, .about-perfil, .about-content, .work-card, .contact-form'
 );
 
 revealElements.forEach((element) => {
