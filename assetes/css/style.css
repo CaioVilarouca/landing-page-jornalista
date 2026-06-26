@@ -497,6 +497,10 @@ img {
     margin-left: 1rem;
 }
 
+.services-modal-link:hover {
+    text-decoration: underline;
+}
+
 .services-modal-item {
     text-align: initial;
     list-style: square;
